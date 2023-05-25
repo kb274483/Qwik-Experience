@@ -4,18 +4,18 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import Counter from '~/components/starter/counter/counter';
 import Hero from '~/components/starter/hero/hero';
 import Infobox from '~/components/starter/infobox/infobox';
-import Starter from '~/components/starter/next-steps/next-steps';
+// import Starter from '~/components/starter/next-steps/next-steps';
 
 export default component$(() => {
   return (
     <>
       <Hero />
 
-      <div class="section bright">
+      {/* <div class="section bright">
         <div class="container center">
           <Starter />
         </div>
-      </div>
+      </div> */}
 
       <div class="section">
         <div class="container center">
@@ -63,7 +63,7 @@ export default component$(() => {
               </div>
               <p>
                 Have a look at the <a href="/demo/flower">Flower App</a> or the{' '}
-                <a href="/demo/todolist">Todo App</a>. {' '} <a href="/secondDemo/todolist">Todo2 App</a>.
+                <a href="/demo/list">Todo App</a>. {' '}
               </p>
             </Infobox>
 

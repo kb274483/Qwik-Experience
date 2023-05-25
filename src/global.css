@@ -25,7 +25,7 @@ body {
   background: linear-gradient(90deg, rgba(24, 182, 246, 0.3) 0%, rgba(172, 127, 244, 0.3) 100%);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 200;
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
 }
 
 ::selection {
@@ -90,14 +90,14 @@ button.gray {
   color: #aaa;
 }
 
-a,
+/* a,
 a:active,
 a:visited,
 a:hover {
   color: black;
   font-weight: 400;
   text-decoration: none;
-}
+} */
 
 .section.bright {
   background: white;
