@@ -63,7 +63,7 @@ export default component$(() => {
               </div>
               <p>
                 Have a look at the <a href="/demo/flower">Flower App</a> or the{' '}
-                <a href="/demo/todolist">Todo App</a>.
+                <a href="/demo/todolist">Todo App</a>. {' '} <a href="/secondDemo/todolist">Todo2 App</a>.
               </p>
             </Infobox>
 

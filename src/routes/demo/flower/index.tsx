@@ -1,4 +1,4 @@
-import { component$, useVisibleTask$, useStore, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, useVisibleTask$, useStore, useStylesScoped$  } from '@builder.io/qwik';
 import { type DocumentHead, useLocation } from '@builder.io/qwik-city';
 import styles from './flower.css?inline';
 
@@ -10,6 +10,7 @@ export default component$(() => {
     count: 0,
     number: 20,
   });
+
 
   useVisibleTask$(({ cleanup }) => {
     const timeout = setTimeout(() => (state.count = 1), 500);

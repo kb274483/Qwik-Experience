@@ -1,11 +1,45 @@
-import { component$ } from '@builder.io/qwik';
-import styles from './hero.module.css';
-
+import { component$, useSignal, useTask$ } from '@builder.io/qwik';
+// import styles from './hero.module.css';
+import { ShowText } from './showText';
 export default component$(() => {
+  const wel = "Welcome to qwik App"
+  const list = useSignal(['a','b','c','d','e','f','g'])
+  const porpColor = useSignal('text-gray-600')
+  const inputVal = useSignal("")
+  useTask$(({track})=>{
+    track(()=>{inputVal.value})
+    if(inputVal.value.indexOf('hello') != -1){
+      porpColor.value = 'text-red-400'
+      list.value = list.value.reverse()
+      console.log(list.value)
+    }else{
+      porpColor.value = 'text-gray-600'
+    }
+  })
+  
   return (
-    <div class={styles.hero}>
-      <h1>Welcome to qwik</h1>
-      <button
+    <div>
+      <h1 
+        class={'text-red-500 font-bold'} 
+        onClick$={()=>{
+            console.log("PPPPPPRRRRINT")
+          }
+        }
+      >
+        {wel}
+      </h1>
+      <input class={'border-blue-400 rounded-lg text-black px-2'} onInput$={(event)=>{
+        inputVal.value = (event.target as HTMLInputElement).value
+      }} />
+      <ShowText msg={inputVal.value} color={porpColor.value}>
+        You type : 
+      </ShowText>
+      {/* <ul>
+        {list.value.map((item, index) => (
+          <li key={item}>{item}{index+1}</li>
+        ))}
+      </ul> */}
+      {/* <button
         onClick$={async () => {
           const defaults = {
             spread: 360,
@@ -59,7 +93,7 @@ export default component$(() => {
         }}
       >
         Time to celebrate 🎉
-      </button>
+      </button>  */}
     </div>
   );
 });
