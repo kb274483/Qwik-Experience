@@ -1,3 +1,9 @@
+# 體驗 Qwik 到底有多快
+  這個App只是一時興起的來試著體驗這個新興的框架有多迅速，順便學習Tsx的寫法。
+
+# Experience How Fast Qwik Really Is
+  This app is just a spontaneous attempt to experience how fast this emerging framework is while learning Tsx syntax along the way.  
+
 # Qwik City App ⚡️
 
 - [Qwik Docs](https://qwik.builder.io/)
